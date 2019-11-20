@@ -80,5 +80,5 @@ Tutaj gość mówi o tym czym jest UX (nagrał całą playlistę):
 - [Jira](https://www.atlassian.com/software/jira/guides)
 - Excel, lub cokolwiek innego
 - Sposoby organizacji pracy w projekcie:
-- [Scrum]https://www.youtube.com/watch?v=XU0llRltyFM
-- [Kanban]https://www.youtube.com/watch?v=R8dYLbJiTUE
+- [Scrum](https://www.youtube.com/watch?v=XU0llRltyFM)
+- [Kanban](https://www.youtube.com/watch?v=R8dYLbJiTUE)
