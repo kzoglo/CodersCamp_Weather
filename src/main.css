@@ -1,0 +1,9 @@
+@import url(./modules/weatherNow/nowStyles.css);
+@import url(./modules/weatherOneDay/oneDayStyles.css);
+@import url(./modules/weatherFiveDays/fiveDaysStyles.css);
+
+/* DEFAULT STYLES for index.html elements not rendered by JS  */
+
+body {
+  background-color: yellow;
+}
