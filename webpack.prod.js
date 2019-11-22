@@ -34,9 +34,6 @@ module.exports = merge(common, {
             filename: '[name].[contentHash].css'
         }),
         new CleanWebpackPlugin()
-        // new HtmlWebpackPlugin({
-        //     template: './src/template.html'
-        // })
     ],
     module: {
         rules: [{
