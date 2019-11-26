@@ -1,10 +1,14 @@
 import './main.css';
 
-import {
-    change
-} from './modules/weatherFiveDays/fiveDays.js';
+import { changeToFiveDays } from './modules/weatherFiveDays/fiveDays.js';
+import { changeToPresentDay } from './modules/weatherNow/nowDays.js';
+import { changeToOneDay } from './modules/weatherOneDay/oneDay.js';
 
 const body = document.body;
-
-body.addEventListener('click', change);
-console.log('hmmmm');
+const nowDay = document.getElementById('nowDay');
+const oneDay = document.getElementById('oneDay');
+const fiveDays = document.getElementById('fiveDays');
+// body.addEventListener('click', change);
+nowDay.addEventListener('click', changeToPresentDay);
+oneDay.addEventListener('click', changeToFiveDays);
+fiveDays.addEventListener('click', changeToOneDay);

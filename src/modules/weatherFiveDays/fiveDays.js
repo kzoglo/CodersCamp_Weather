@@ -1,7 +1,9 @@
+// eslint-disable-next-line no-undef
 const p = document.querySelector('.main');
-const div = document.querySelector('.div');
+// eslint-disable-next-line no-undef
+// const div = document.querySelector('.div');
 
-export const change = function () {
-    p.textContent = 'DUPA';
-
-}
+// eslint-disable-next-line import/prefer-default-export
+export const changeToFiveDays = function() {
+ p.textContent = 'piec dni';
+};
