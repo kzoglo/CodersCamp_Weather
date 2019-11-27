@@ -1,4 +1,4 @@
-import './main.css';
+// import './main.css';
 
 import { changeToFiveDays } from './modules/weatherFiveDays/fiveDays.js';
 import { changeToPresentDay } from './modules/weatherNow/nowDays.js';
@@ -10,5 +10,5 @@ const oneDay = document.getElementById('oneDay');
 const fiveDays = document.getElementById('fiveDays');
 // body.addEventListener('click', change);
 nowDay.addEventListener('click', changeToPresentDay);
-oneDay.addEventListener('click', changeToFiveDays);
-fiveDays.addEventListener('click', changeToOneDay);
+oneDay.addEventListener('click', changeToOneDay);
+fiveDays.addEventListener('click', changeToFiveDays);
