@@ -1,0 +1,20 @@
+html {
+    width: 100%;
+}
+#container {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.mainBox {
+    height: 100%;
+    width: 60%;
+    background-color: rgb(162, 162, 255);
+}
+
+.secBox {
+    height: 100%;
+    width: 38%;
+    background-color: rgb(199, 199, 199);
+}
