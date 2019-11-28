@@ -12,3 +12,4 @@ const fiveDays = document.getElementById('fiveDays');
 nowDay.addEventListener('click', changeToPresentDay);
 oneDay.addEventListener('click', changeToOneDay);
 fiveDays.addEventListener('click', changeToFiveDays);
+

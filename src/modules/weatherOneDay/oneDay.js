@@ -9,11 +9,6 @@ const apiKey = 'd50a614e489fbba6669358f04ee95daa';
 const query = 'http://api.openweathermap.org/data/2.5/forecast?q=';
 const units = 'metric'
 
-// eslint-disable-next-line no-undef
-const mainContainer = document.querySelector('.main');
-// eslint-disable-next-line no-undef
-const container = document.querySelector('.container');
-
 function fetchFromApi(cityInput){
     fetch(`${query}${cityInput}&APPID=${apiKey}&units=${units}`)
     .then(result => result.json())
