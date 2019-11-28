@@ -6,4 +6,23 @@
 
 body {
   background-color: yellow;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+
+
+.main {
+  width: 70vw;
+  height: 40vh;
+  margin: auto;
+  background: white;
+}
+
+.btn-nav {
+  padding: 2%;
+  width: 70vw;
+  margin: auto;
+  text-align: center;
+  background-color: gray;
 }
