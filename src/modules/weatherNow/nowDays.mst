@@ -1,0 +1,36 @@
+
+<div id="container">
+  <div class="mainBox">
+    <div class="grid-item notempty"> Temperatura: <b>{{main.temp}} &#176;C</b> </div>
+    <div class="grid-item notempty"> Opad: <b></b></div>
+    <div class="grid-item notempty"> Wilgotność: <b>{{main.humidity}}</b> </div>
+    <div class="grid-item notempty "> Prędkość wiatru: <b>{{wind.speed}}</b></div>
+
+    <div class="grid-item notempty"> Temperatura minimalna: <b>{{main.temp_min}} &#176;C</b></div>
+    <div class="grid-item">  </div>
+    <div class="grid-item notempty"> Ciśnienie: <b>{{main.pressure}} hec</b></div>
+    <div class="grid-item notempty"> Kierunek wiatru <b>{{wind.deg}}&#176;</b></div>
+
+    <div class="grid-item notempty"> Temperatura maksymalna: <b>{{main.temp_max}} &#176;C</b></div>
+    <div class="grid-item">  </div>
+    <div class="grid-item">  </div>
+    <div class="grid-item">  </div>
+
+    <div class="grid-item notempty"> Wschód słońca: <b> </b></div>
+    <div class="grid-item notempty"> <i class="fa fa-sun-o"></i> </div>
+    <div class="grid-item notempty"> Zachód słońca: <b> </b> </div>Oki to 
+    <div class="grid-item notempty" style="text-align:left"> <i class="fa fa-moon-o"></i> </div>
+  </div>
+  <div class="secBox ">
+    dlhsdldshg
+  </div>
+</div>
+
+{{! grnd_level: 982
+humidity: 81
+pressure: 998
+sea_level: 998
+temp: 8.31
+temp_kf: -0.18
+temp_max: 8.49
+temp_min: 8.31 }}
