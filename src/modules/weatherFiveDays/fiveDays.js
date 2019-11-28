@@ -5,5 +5,5 @@ const p = document.querySelector('.main');
 
 // eslint-disable-next-line import/prefer-default-export
 export const changeToFiveDays = function() {
- p.textContent = 'piec dni';
+ p.textContent = 'aesfs';
 };
