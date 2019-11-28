@@ -18,7 +18,7 @@
 
     <div class="grid-item notempty"> Wschód słońca: <b> </b></div>
     <div class="grid-item notempty"> <i class="fa fa-sun-o"></i> </div>
-    <div class="grid-item notempty"> Zachód słońca: <b> </b> </div>Oki to 
+    <div class="grid-item notempty"> Zachód słońca: <b> </b> </div>
     <div class="grid-item notempty" style="text-align:left"> <i class="fa fa-moon-o"></i> </div>
   </div>
   <div class="secBox ">
