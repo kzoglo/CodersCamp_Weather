@@ -45,5 +45,13 @@
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goraklaudia/CodersCamp_projekt3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goraklaudia/CodersCamp_projekt3/issues"
+  },
+  "homepage": "https://github.com/goraklaudia/CodersCamp_projekt3#readme"
 }
