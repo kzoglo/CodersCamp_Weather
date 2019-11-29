@@ -15,12 +15,13 @@
     float: left;
 }
 
-.secBox {
+#secBox {
     height: 100%;
-    width: 39.8%;
-    background-color: rgb(216, 216, 216);
+    width: 39.2%;
+    background-color: rgb(238, 238, 238);
+    border: 1px dotted gray;
     float: left;
-    margin-left: 0.2%; 
+    margin-left: 0.8%; 
     padding: 1%;
 }
 
@@ -59,3 +60,14 @@
     50% { transform: translate(30px, -15px); }
     100% { transform: translate(60px,0px); }
   }
+
+#todayDate{
+    color: rgb(41, 41, 41);
+    font-size: 24px;
+    /* background-color: white; */
+    text-align: center;
+    font-family: 'Jomolhari', serif;
+}
+
+/* font-family: 'Jomolhari', serif;
+font-family: 'Viga', sans-serif; */
