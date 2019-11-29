@@ -1,4 +1,16 @@
-.main {
-    /* color: red; */
-    /* background-color: lightblue; */
+div{
+    /* background-color: rgb(255, 252, 220); */
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content;
+}
+h1{
+    font-size: 45px;
+    align-content:center;
+    text-align: center
+    
+}
+canvas{
+  justify-content: center;
+  align-content: center;
 }
