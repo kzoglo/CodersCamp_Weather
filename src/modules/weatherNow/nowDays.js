@@ -1,7 +1,6 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
 // eslint-disable-next-line no-undef
-const mainContainer = document.querySelector('.main');
 
 // eslint-disable-next-line import/prefer-default-export
 export const changeToPresentDay = async function() {
@@ -10,8 +9,6 @@ export const changeToPresentDay = async function() {
 
 const apiKey = 'd50a614e489fbba6669358f04ee95daa';
 const query = 'http://api.openweathermap.org/data/2.5/forecast?q=';
-// const query = 'http://api.openweathermap.org/data/2.5/weather?q=';
-// api.openweathermap.org/data/2.5/weather?q
 const units = 'metric';
 
 function fetchFromApi(cityInput) {
@@ -50,18 +47,16 @@ function afterRender(result) {
 
  document.getElementById('sunriseValue').textContent = getSunRiseSet(result.city.sunrise);
  document.getElementById('sunsetValue').textContent = getSunRiseSet(result.city.sunset);
-
-
 }
 
 function getTodaysObject(x) {
- let todayDate = getTodaysDate();
+ const todayDate = getTodaysDate();
  const todayObjects = x.list.filter(date => {
   if (date.dt_txt.includes(todayDate)) {
    return date;
   }
  });
- console.log(todayObjects)
+ //  console.log(todayObjects);
  return todayObjects;
 }
 
@@ -72,8 +67,8 @@ function getTodaysDate() {
 }
 
 function createTempChar(todayObjects) {
-  $("#chartContainer").html("");
-  console.log(todayObjects)
+ $("#chartContainer").html("");
+ console.log(todayObjects)
   const h = todayObjects.map(x => [x.dt_txt.split(' ')[1].split(':')[0], x.main.temp])
   let tableObjectOfh = []
   for(let i=0; i<h.length; i++) {
@@ -99,7 +94,7 @@ function createTempChar(todayObjects) {
     }]
   });
 
-  chart.render();
+ chart.render();
 }
 
 function createWindChar(x) {
