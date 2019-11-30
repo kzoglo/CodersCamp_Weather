@@ -24,12 +24,15 @@ let doneTypingInterval = 500; // Time in ms (.5 second)
 
 // Calling modules
 nowDay.addEventListener('click', () => {
+    $(".main").html("");
     changeToPresentDay(cityId);
 });
 oneDay.addEventListener('click', () => {
+    $(".main").html("");
     changeToOneDay(cityId);
 });
 fiveDays.addEventListener('click', () => {
+    $(".main").html("");
     changeToFiveDays(cityId);
 });
 
@@ -71,6 +74,7 @@ autocompleteList.addEventListener('click', e => {
         value = value.slice(0, sliceIndex);
         searchCity.value = value;
         cityId = e.target.dataset.city_id;
+        nowDay.click();
     }
 });
 

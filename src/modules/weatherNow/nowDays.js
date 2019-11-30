@@ -40,7 +40,7 @@ function getSunRiseSet(x){
 }
 
 function afterRender(result) {
- document.getElementById('todayDate').textContent = getTodaysDate();
+ document.getElementById('todayDate').innerHTML = ` Dzisiejsza data:<br> ${getTodaysDate()}`
  const todayObjects = getTodaysObject(result);
  createTempChar(todayObjects);
 

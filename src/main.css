@@ -173,3 +173,41 @@ body {
   background-color: #555555;
   color: white;
 }
+
+#openText{
+  font-size: 25px;
+  color: rgb(31, 31, 31);
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#imgOpen {
+  height:40%;
+  width:40%;
+}
+
+.spaceBottom {
+  height: 15vh;
+}
+
+.btn-group{
+  width: 100%;
+  background: rgb(194, 194, 194);
+}
+
+.btn-n {
+  padding: 10px;
+  border-radius: 0px;
+
+}
+
+#search-city-input{
+  padding: 20px;
+  font-size: 16px;
+}
+
+.imgOpenSun{
+  height: 12%;
+  width: 12%;
+}
