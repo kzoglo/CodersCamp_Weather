@@ -146,32 +146,7 @@ body {
   border-bottom: solid #6c757d 1.5px;
 }
 
-/***** MEDIA QUERIES *****/
-@media screen and (max-width: 500px) {
-  .header-title {
-    font-size: 7vh;
-  }
 
-  .footer {
-    border-image: linear-gradient(to left, #30a3dce8, rgba(35, 34, 93, 0.99)) 50 repeat;
-  }
-
-  .footer-authors {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4, 20%);
-    justify-content: center;
-    align-content: center;
-  }
-
-  .author {
-    border: none;
-    font-size: 9px;
-  }
-
-  .authors {
-    font-size: 11px;
-  }
-}
 
 #nameOfCity {
   padding: 1%;
@@ -188,8 +163,8 @@ body {
 }
 
 #imgOpen {
-  height:40%;
-  width:40%;
+  height:25%;
+  width:25%;
 }
 
 .spaceBottom {
@@ -215,4 +190,44 @@ body {
 .imgOpenSun{
   height: 12%;
   width: 12%;
+}
+
+/***** MEDIA QUERIES *****/
+@media screen and (max-width: 500px) {
+  .header-title {
+    font-size: 7vh;
+  }
+
+  .footer {
+    border-image: linear-gradient(to left, #30a3dce8, rgba(35, 34, 93, 0.99)) 50 repeat;
+  }
+
+  .footer-authors {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 20%);
+    justify-content: center;
+    align-content: center;
+  }
+
+  .author {
+    border: none;
+    font-size: 9px;
+  }
+
+  .authors {
+    font-size: 11px;
+  }
+
+  #imgOpen {
+    height:35%;
+    width:35%;
+  }
+
+  #openText{
+    font-size: 18px;
+    color: rgb(31, 31, 31);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
 }
