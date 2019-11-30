@@ -1,10 +1,10 @@
 
 <div id="container">
   <div class="mainBox">
-    <div class="grid-item notempty"> Temperatura: <b>{{main.temp}} &#176;C</b> </div>
-    <div class="grid-item notempty"> Opad: <b></b></div>
-    <div class="grid-item notempty"> Wilgotność: <b>{{main.humidity}}</b> </div>
-    <div class="grid-item notempty "> Prędkość wiatru: <b>{{wind.speed}}</b></div>
+    <div class="grid-item notempty" id="temp"> Temperatura: <b>{{main.temp}} &#176;C</b> </div>
+    <div class="grid-item notempty " id="rain"> Opad: <b></b></div>
+    <div class="grid-item notempty"> Wilgotność: <b>{{main.humidity}} %</b> </div>
+    <div class="grid-item notempty" id="wind"> Prędkość wiatru: <b>{{wind.speed}} km/h</b></div>
 
     <div class="grid-item notempty"> Temperatura minimalna: <b>{{main.temp_min}} &#176;C</b></div>
     <div class="grid-item">  </div>
@@ -19,11 +19,11 @@
     <div class="grid-item notempty"> Wschód słońca: <b> </b></div>
     <div class="grid-item notempty"> <i class="fa fa-sun-o"></i> </div>
     <div class="grid-item notempty"> Zachód słońca: <b> </b> </div>
-    <div class="grid-item notempty" style="text-align:left"> <i class="fa fa-moon-o"></i> </div>
+    <div class="grid-item notempty"> <i class="fa fa-moon-o"></i> </div>
   </div>
   <div id="secBox">
     <div id="todayDate"></div>
-    <div></div>
+    <div id="chartContainer"></div>
     <div></div>
   </div>
 </div>

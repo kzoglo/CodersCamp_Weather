@@ -1,3 +1,6 @@
+:root {
+    --wind-deg: 100deg;
+}
 #container {
     background-color: white;
     width: 100%;
@@ -47,7 +50,7 @@
 
 .fa-moon-o {
     color: gray;
-    animation: moon-up 5s linear infinite; 
+    animation: moon-up 3s linear infinite; 
     animation-direction: alternate;
 }
 
@@ -57,8 +60,9 @@
 }
 
 @keyframes moon-up{
-    50% { transform: translate(30px, -15px); }
-    100% { transform: translate(60px,0px); }
+    0% { transform: translate(0px, 10px); }
+    50% { transform: translate(0px, 0px); }
+    100% {transform: translate(0px, -10px); }
   }
 
 #todayDate{
@@ -69,5 +73,48 @@
     font-family: 'Jomolhari', serif;
 }
 
+#chartContainer{
+    color: black;
+    font-size: 12px;
+    height: 88%;
+    width: 100%;
+    margin-top: 2px;
+    background-color: white;
+    text-align: center;
+    font-family: 'Jomolhari', serif;
+    padding: 1%;
+
+}
+
+#temp, #wind, #rain {
+    cursor: pointer;
+}
+
+#temp:hover, #wind:hover, #rain:hover {
+    background-color: rgb(168, 168, 199);
+    font-weight: bold;
+}
 /* font-family: 'Jomolhari', serif;
 font-family: 'Viga', sans-serif; */
+
+
+
+
+
+/* ---------------------------------- wind.css */
+
+#imgWind {
+    height: 40%;
+    width: 40%;
+}
+
+.fa-location-arrow {
+    color: blue;
+    animation: wind 5s linear; 
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes wind{
+  to{ transform: rotate(var(--wind-deg)); }
+}
