@@ -81,7 +81,7 @@
     height: 300px;
     width: 100%;
     margin-top: 2px;
-    background-color: white;
+    /* background-color: white; */
     text-align: center;
     font-family: 'Jomolhari', serif;
     padding: 1%;
@@ -92,9 +92,8 @@
 }
 
 #temp:hover, #wind:hover, #rain:hover {
-    background-color: rgb(168, 168, 199);
-    font-size: 11px;
-    font-weight: bold;
+    background-color: rgb(73, 73, 82);
+    color: white;
 }
 /* font-family: 'Jomolhari', serif;
 font-family: 'Viga', sans-serif; */
@@ -111,6 +110,23 @@ font-family: 'Viga', sans-serif; */
     height: 40%;
     width: 40%;
 }
+
+#imgRain {
+    height: 30%;
+    width: 30%;
+    animation: rainImg 3s linear infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes rainImg{
+    0% {transform: translate(0px, 0px); }
+    50% { transform: translate(-40px, 55px); }
+    100% { transform: translate(40px, 100px); }
+   
+}
+
+
 
 .fa-location-arrow {
     color: blue;
@@ -138,6 +154,15 @@ font-family: 'Viga', sans-serif; */
         display:none;
     }
 
+    #imgWind {
+        height: 30%;
+        width: 30%;
+    }
+
+    #spaceIconContentWind{
+        margin: 2%;
+    }
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -158,7 +183,7 @@ font-family: 'Viga', sans-serif; */
     }
 
     #spaceIconContentWind{
-        margin: 1%;
+        margin: -1%
     }
 }
 

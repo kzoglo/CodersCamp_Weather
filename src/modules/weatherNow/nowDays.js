@@ -10,6 +10,8 @@ export const changeToPresentDay = async function() {
 
 const apiKey = 'd50a614e489fbba6669358f04ee95daa';
 const query = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+// const query = 'http://api.openweathermap.org/data/2.5/weather?q=';
+// api.openweathermap.org/data/2.5/weather?q
 const units = 'metric';
 
 function fetchFromApi(cityInput) {
@@ -28,14 +30,27 @@ function render(x) {
  });
 }
 
+function getSunRiseSet(x){
+  var date = new Date(x*1000);
+  var hours = date.getHours();
+  var minutes = "0" + date.getMinutes();
+  var seconds = "0" + date.getSeconds();
+  var formattedTime = hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+  return formattedTime;
+}
+
 function afterRender(result) {
  document.getElementById('todayDate').textContent = getTodaysDate();
  const todayObjects = getTodaysObject(result);
  createTempChar(todayObjects);
 
  document.getElementById('temp').addEventListener('click', function(){createTempChar(todayObjects)});
- document.getElementById('rain').addEventListener('click', createRainChar);
+ document.getElementById('rain').addEventListener('click',  function(){createRainChar(result);});
  document.getElementById('wind').addEventListener('click', function(){createWindChar(result);});
+
+ document.getElementById('sunriseValue').textContent = getSunRiseSet(result.city.sunrise);
+ document.getElementById('sunsetValue').textContent = getSunRiseSet(result.city.sunset);
+
 
 }
 
@@ -98,11 +113,29 @@ function createWindChar(x) {
   console.log('wind');
 }
 
-function createRainChar() {
+function createRainChar(x) {
   $("#chartContainer").html("");
-  console.log('rain');
+  $.get('/src/modules/weatherNow/rain.mst', function(template) {
+    let weather = checkWeather(x.list[0].weather[0])[0]
+    const result = Mustache.to_html(template, weather);
+    $('#chartContainer').html(result);
+    $("#imgRain").attr('src', `http://openweathermap.org/img/w/${weather.icon}.png`);
+    // $(".fa-location-arrow")[0].style.cssText = `--wind-deg: ${x.list[0].wind.deg}deg`;
+   });
+  // console.log('rain');
 }
 
- //  document.getElementById('secBox').addEventListener('click', function () {
- //    console.log('smile');
- //  })
+function checkWeather(weather) {
+
+  let todayWeather = [];
+  if(weather.main.includes('Snow')) {
+    todayWeather.push({x:'Śnieg', icon:weather.icon})
+  } else if(weather.main.includes('Clear')) {
+    // todayWeather.push(['Czyste niebo', weather.icon])
+    todayWeather.push({x:'Czyste niebo', icon:weather.icon})
+  } else if(weather.main.includes('Cloud')) {
+    // todayWeather.push(['Chmury', weather.icon])
+    todayWeather.push({x:'Zachmurzone niebo', icon:weather.icon})
+  } 
+  return todayWeather;
+}
