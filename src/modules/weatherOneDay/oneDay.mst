@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{! <!DOCTYPE html>
 <html lang="pl">
 
 <head>
@@ -9,9 +9,9 @@
   
 </head>
 
-<body>
+<body> }}
   <div class="container">
-    <div class="bar">Miasto</div>
+    <div class="bar">&nbsp;</div>
     <div class="time" id="1t">1t</div>
     <div class="time" id="2t">2t</div>
     <div class="time" id="3t">3t</div>
@@ -33,6 +33,6 @@
 
     <script type="module" src="oneDay.js"></script>
   </div>
-</body>
+{{! </body>
 
-</html>
+</html> }}

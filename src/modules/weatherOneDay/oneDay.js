@@ -1,44 +1,80 @@
 // eslint-disable-next-line import/prefer-default-export
-export const changeToOneDay = function() {
-    const x = fetchFromApi();
-    mainContainer.innerHTML = '<object type="text/html" data="/src/modules/weatherOneDay/oneDay.html" ></object>';
+
+const mainContainer = document.querySelector('.main');
+export const changeToOneDay = function(city) {
+    if (city === undefined)
+        city = 3081368;
+    const x = fetchFromApi(city);
+    // mainContainer.innerHTML = '<object type="text/html" data="/src/modules/weatherOneDay/oneDay.html" ></object>';
     // mainContainer.textContent = x;
     
 };
 
+
+
 const apiKey = 'd50a614e489fbba6669358f04ee95daa';
-const query = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+const query = 'http://api.openweathermap.org/data/2.5/forecast?id=';
 const units = 'metric';
 const iconURL = 'http://openweathermap.org/img/wn/';
 
-const city = document.querySelector('.bar');
-const quote = document.querySelector('.quote');
+let city;
+let quote;
 
-const t1 = document.getElementById('1t');
-const t2 = document.getElementById('2t');
-const t3 = document.getElementById('3t');
-const t4 = document.getElementById('4t');
-const t5 = document.getElementById('5t');
+let t1;
+let t2;
+let t3;
+let t4;
+let t5;
 
-const i1 = document.getElementById('1i');
-const i2 = document.getElementById('2i');
-const i3 = document.getElementById('3i');
-const i4 = document.getElementById('4i');
-const i5 = document.getElementById('5i');
+let i1;
+let i2;
+let i3;
+let i4;
+let i5;
 
-const c1 = document.getElementById('1c');
-const c2 = document.getElementById('2c');
-const c3 = document.getElementById('3c');
-const c4 = document.getElementById('4c');
-const c5 = document.getElementById('5c');
+let c1;
+let c2;
+let c3;
+let c4;
+let c5;
 
 
 function fetchFromApi(cityInput){
     fetch(`${query}${cityInput}&APPID=${apiKey}&units=${units}`)
     .then(result => result.json())
-    .then(result => draw(result))
+    .then(result => render(result))
     .catch(reject => console.log('Rejected: ' + reject));
 };
+
+function render(x) {
+    $.get('/src/modules/weatherOneDay/oneDay.mst', function(template) {
+     console.log(x);
+     document.getElementById('nameOfCity').textContent = x.city.name;
+     const result = Mustache.to_html(template, x.list[0]);
+     $('.main').html(result);
+    city = document.querySelector('.bar');
+    quote = document.querySelector('.quote');
+
+    t1 = document.getElementById('1t');
+    t2 = document.getElementById('2t');
+      t3 = document.getElementById('3t');
+      t4 = document.getElementById('4t');
+     t5 = document.getElementById('5t');
+
+     i1 = document.getElementById('1i');
+     i2 = document.getElementById('2i');
+     i3 = document.getElementById('3i');
+     i4 = document.getElementById('4i');
+     i5 = document.getElementById('5i');
+
+     c1 = document.getElementById('1c');
+     c2 = document.getElementById('2c');
+     c3 = document.getElementById('3c');
+     c4 = document.getElementById('4c');
+     c5 = document.getElementById('5c');
+     draw(x)
+    });
+   }
 
 function draw(result){
     const indexOf = indexOfT(result);
@@ -48,7 +84,7 @@ function draw(result){
     const fourth = indexOf + 6;
     const fifth = indexOf + 7;
 
-    city.textContent = `${result.city.name} - prognoza na jutro`;
+    city.textContent = `Prognoza na jutrzejszy dzień`;
     quote.textContent = "Dzisiaj będzie wspaniały dzień!";
 
     t1.textContent = '9:00' //result.list[first].dt_txt;
