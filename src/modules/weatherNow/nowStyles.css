@@ -163,6 +163,9 @@ font-family: 'Viga', sans-serif; */
         margin: 2%;
     }
 
+    .main {
+        margin-bottom: 25vw;
+      }
 }
 
 @media only screen and (max-width: 900px) {

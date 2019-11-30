@@ -3,12 +3,14 @@
 // eslint-disable-next-line no-undef
 
 // eslint-disable-next-line import/prefer-default-export
-export const changeToPresentDay = async function() {
- const x = fetchFromApi('Wrocław');
+export const changeToPresentDay = async function(city) {
+  if (city === undefined)
+    city = 3081368;
+ const x = fetchFromApi(city);
 };
 
 const apiKey = 'd50a614e489fbba6669358f04ee95daa';
-const query = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+const query = 'http://api.openweathermap.org/data/2.5/forecast?id=';
 const units = 'metric';
 
 function fetchFromApi(cityInput) {
@@ -21,6 +23,7 @@ function fetchFromApi(cityInput) {
 function render(x) {
  $.get('/src/modules/weatherNow/nowDays.mst', function(template) {
   console.log(x);
+  document.getElementById('nameOfCity').textContent = x.city.name;
   const result = Mustache.to_html(template, x.list[0]);
   $('.main').html(result);
   afterRender(x);
