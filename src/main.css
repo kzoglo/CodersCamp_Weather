@@ -165,6 +165,11 @@ body {
 
   .author {
     border: none;
+    font-size: 9px;
+  }
+
+  .authors {
+    font-size: 11px;
   }
 }
 
