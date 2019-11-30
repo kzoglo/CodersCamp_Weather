@@ -1,7 +1,10 @@
+:root {
+    --wind-deg: 100deg;
+}
 #container {
     background-color: white;
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 2%;
     justify-items: center;
     flex:wrap;
@@ -15,7 +18,7 @@
     float: left;
 }
 
-#secBox {
+.secBox {
     height: 100%;
     width: 39.2%;
     background-color: rgb(238, 238, 238);
@@ -23,7 +26,10 @@
     float: left;
     margin-left: 0.8%; 
     padding: 1%;
+
+    /* justify-content: center; */
 }
+
 
 .grid-item{
     padding: 20px;
@@ -47,7 +53,7 @@
 
 .fa-moon-o {
     color: gray;
-    animation: moon-up 5s linear infinite; 
+    animation: moon-up 3s linear infinite; 
     animation-direction: alternate;
 }
 
@@ -57,17 +63,127 @@
 }
 
 @keyframes moon-up{
-    50% { transform: translate(30px, -15px); }
-    100% { transform: translate(60px,0px); }
+    0% { transform: translate(0px, 10px); }
+    50% { transform: translate(0px, 0px); }
+    100% {transform: translate(0px, -10px); }
   }
 
 #todayDate{
     color: rgb(41, 41, 41);
     font-size: 24px;
-    /* background-color: white; */
     text-align: center;
     font-family: 'Jomolhari', serif;
 }
 
+#chartContainer{
+    color: black;
+    font-size: 12px;
+    height: 300px;
+    width: 100%;
+    margin-top: 2px;
+    /* background-color: white; */
+    text-align: center;
+    font-family: 'Jomolhari', serif;
+    padding: 1%;
+}
+
+#temp, #wind, #rain {
+    cursor: pointer;
+}
+
+#temp:hover, #wind:hover, #rain:hover {
+    background-color: rgb(73, 73, 82);
+    color: white;
+}
 /* font-family: 'Jomolhari', serif;
 font-family: 'Viga', sans-serif; */
+
+#spaceIconContentWind{
+    margin: 5%;
+}
+
+
+
+/* ---------------------------------- wind.css */
+
+#imgWind {
+    height: 40%;
+    width: 40%;
+}
+
+#imgRain {
+    height: 30%;
+    width: 30%;
+    animation: rainImg 3s linear infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes rainImg{
+    0% {transform: translate(0px, 0px); }
+    50% { transform: translate(-40px, 55px); }
+    100% { transform: translate(40px, 100px); }
+   
+}
+
+
+
+.fa-location-arrow {
+    color: blue;
+    animation: wind 5s linear; 
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes wind{
+  to{ transform: rotate(var(--wind-deg)); }
+}
+
+#windContent {
+    font-size: 20px;
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    .mainBox {
+        grid-template-columns: auto auto;
+    }
+
+    #empty {
+        display:none;
+    }
+
+    #imgWind {
+        height: 30%;
+        width: 30%;
+    }
+
+    #spaceIconContentWind{
+        margin: 2%;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .mainBox {
+        grid-template-columns: auto;
+        float: none;
+        display: contents;
+    }
+
+    
+    .secBox {
+        margin-top: 3px;
+        width: 100%;
+        height: auto;
+        float: none;
+        display: block;
+        margin-left: 0%;
+    }
+
+    #spaceIconContentWind{
+        margin: -1%
+    }
+}
+

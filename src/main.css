@@ -15,6 +15,14 @@ body {
   color: black;
 }
 
+.main {
+  width: 70vw;
+  /* height: 60vh; */
+  display: flex;
+  /* flex-direction: column; */
+  min-height: 60vh;
+  margin: auto;
+  background: white;
 /***** HEADER *****/
 .header {
   width: 100vw;
