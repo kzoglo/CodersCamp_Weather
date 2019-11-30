@@ -1,0 +1,9 @@
+<div>
+    {{#wind.speed}}
+    <img src="/src/assets/wind.gif" alt="wind" id="imgWind">
+    {{/wind.speed}}
+    <div id="spaceIconContentWind"></div>
+    <div id="windContent">Prędkość: {{wind.speed}} km/h</div> <br><br>
+    <div id="windContent">Kierunek: <i class='fas fa-location-arrow'></i></div>
+
+</div>

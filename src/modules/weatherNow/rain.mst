@@ -1,0 +1,8 @@
+{{! http://openweathermap.org/img/w/04n.png }}
+<div>
+    {{#x}}
+    <div id="windContent">{{x}}</div> <br><br>
+    <img  alt="wind" id="imgRain">
+    {{/x}}
+
+</div>
