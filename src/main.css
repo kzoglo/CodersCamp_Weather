@@ -12,7 +12,10 @@ body {
 
 .main {
   width: 70vw;
-  height: 60vh;
+  /* height: 60vh; */
+  display: flex;
+  /* flex-direction: column; */
+  min-height: 60vh;
   margin: auto;
   background: white;
 }
