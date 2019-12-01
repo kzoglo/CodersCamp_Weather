@@ -1,6 +1,6 @@
 
 
-
+/* 
 .main{
     
     display: grid;
@@ -9,28 +9,30 @@
     justify-items: center;
     justify-content: space-evenly;
    
-}
+} */
+
 .container{
+  text-align: center;
   justify-items: center;
   align-content: center;
-  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 2px;
 }
 h1{
-    font-size: 45px;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 20px;
     
 }
 @media only screen and (max-width: 650px) {
   
+  h1{
+      font-size: 15px;
+      /* font-family: Arial, Helvetica, sans-serif; */
+      
+  }
 
-h1{
-    font-size: 15px;
-    /* font-family: Arial, Helvetica, sans-serif; */
-    
-}
-.container{
-  height: 70%;
-  width: 70%;
-  position: relative;
-}
+  #myChart{
+    height: 90%;
+    width: 1fe;
+  }
 }
