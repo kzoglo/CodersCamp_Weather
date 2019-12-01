@@ -1,10 +1,12 @@
-export const changeToFiveDays = async function() {
-    const x = fetchFromApi('Wrocław');
+export const changeToFiveDays = async function(city) {
+    if (city === undefined)
+        city = 3081368;
+    const x = fetchFromApi(city);
     };
 
     
 const apiKey = '18ab372b1fc6ef784c0191c7e088d9a2';
-const query = 'https://api.openweathermap.org/data/2.5/forecast?q=';
+const query = 'https://api.openweathermap.org/data/2.5/forecast?id=';
 const units = 'metric';
 
 
