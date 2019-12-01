@@ -11,25 +11,25 @@
 
 <body> }}
   <div class="container">
-    <div class="bar">&nbsp;</div>
-    <div class="time" id="1t">1t</div>
-    <div class="time" id="2t">2t</div>
-    <div class="time" id="3t">3t</div>
-    <div class="time" id="4t">4t</div>
-    <div class="time" id="5t">5t</div>
+    <div class="grid-item bar">&nbsp;</div>
+    <div class="grid-item time" id="1t">1t</div>
+    <div class="grid-item time" id="2t">2t</div>
+    <div class="grid-item time" id="3t">3t</div>
+    <div class="grid-item time" id="4t">4t</div>
+    <div class="grid-item time" id="5t">5t</div>
 
-    <div class="quote">quote</div>
-    <img class="icon" id="1i"></img>
-    <img class="icon" id="2i"></img>
-    <img class="icon" id="3i"></img>
-    <img class="icon" id="4i"></img>
-    <img class="icon" id="5i"></img>
+    <div class="grid-item quote">quote</div>
+    <div class="grid-item icon"><img id="1i"></div>
+    <div class="grid-item icon"><img id="2i"></div>
+    <div class="grid-item icon"><img id="3i"></div>
+    <div class="grid-item icon"><img id="4i"></div>
+    <div class="grid-item icon"><img id="5i"></div>
 
-    <div class="temperature" id="1c">1t</div>
-    <div class="temperature" id="2c">2t</div>
-    <div class="temperature" id="3c">3t</div>
-    <div class="temperature" id="4c">4t</div>
-    <div class="temperature" id="5c">5t</div>
+    <div class="grid-item temperature" id="1c">1t</div>
+    <div class="grid-item temperature" id="2c">2t</div>
+    <div class="grid-item temperature" id="3c">3t</div>
+    <div class="grid-item temperature" id="4c">4t</div>
+    <div class="grid-item temperature" id="5c">5t</div>
 
     <script type="module" src="oneDay.js"></script>
   </div>
