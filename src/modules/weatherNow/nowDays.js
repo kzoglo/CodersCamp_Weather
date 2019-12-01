@@ -65,7 +65,11 @@ function getTodaysObject(x) {
 
 function getTodaysDate() {
  const d = new Date();
- const todayDate = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+ let todayDate = '';
+ if (d.getDate()<10)
+  todayDate = `${d.getFullYear()}-${d.getMonth() + 1}-0${d.getDate()}`;
+ else
+  todayDate = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
  return todayDate;
 }
 
