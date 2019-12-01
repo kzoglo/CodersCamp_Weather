@@ -13,7 +13,7 @@ export const changeToOneDay = function(city) {
 
 
 const apiKey = 'd50a614e489fbba6669358f04ee95daa';
-const query = 'http://api.openweathermap.org/data/2.5/forecast?id=';
+const query = 'https://api.openweathermap.org/data/2.5/forecast?id=';
 const units = 'metric';
 const iconURL = 'http://openweathermap.org/img/wn/';
 
@@ -47,7 +47,7 @@ function fetchFromApi(cityInput){
 };
 
 function render(x) {
-    $.get('/src/modules/weatherOneDay/oneDay.mst', function(template) {
+    $.get('../src/modules/weatherOneDay/oneDay.mst', function(template) {
         document.getElementById('nameOfCity').textContent = x.city.name;
         const result = Mustache.to_html(template, x.list[0]);
         $('.main').html(result);
