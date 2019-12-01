@@ -149,9 +149,11 @@ body {
 
 
 #nameOfCity {
-  padding: 1%;
+  padding: 2%;
   background-color: #555555;
+  font-size: 25px;
   color: white;
+  font-family: 'Muli', sans-serif;
 }
 
 #openText{

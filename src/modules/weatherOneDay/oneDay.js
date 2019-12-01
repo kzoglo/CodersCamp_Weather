@@ -91,7 +91,7 @@ function draw(result){
         result.list[fourth].weather[0].icon,
         result.list[fifth].weather[0].icon
     ]
-    gridHeader.textContent = `Prognoza na jutrzejszy dzień`;
+    gridHeader.textContent = `Prognoza pogody na jutrzejszy dzień`;
     
     t1.textContent = '9:00';
     i1.src = iconURL + icons[0] + '.png';

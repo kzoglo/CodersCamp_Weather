@@ -23,8 +23,8 @@
     padding-top: 40px
 }
 
-.time{font-size:20px}
-.temperature{font-size:20px}
+.time{font-size:18px}
+.temperature{font-size:18px}
 .icon{
     padding-bottom: 40px;
     background-color: white;
@@ -33,7 +33,7 @@
 .bar{
     grid-column: 1 / span 6;
     justify-self: left;
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     width: 54%
 }
