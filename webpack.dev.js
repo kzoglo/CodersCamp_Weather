@@ -27,14 +27,7 @@ module.exports = merge(common, {
           emitWarning: true,
           configFile: './.eslintrc.json'
         }
-      },
-      {
-        test: /\.mst$/,
-        loader: 'mustache-loader'
-        // loader: 'mustache-loader?minify'
-        // loader: 'mustache-loader?{ minify: { removeComments: false } }'
-        // loader: 'mustache-loader?noShortcut'
-    }
+      }
     ]
   }
 });
