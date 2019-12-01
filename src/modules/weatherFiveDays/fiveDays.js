@@ -95,6 +95,9 @@ function doAfter(resp){
     
             },
             options:{
+                responsive:true,
+                legend: {
+                    display: false,
                 scales:{
                     yAxes:[{
                         ticks:{ 
@@ -105,8 +108,8 @@ function doAfter(resp){
     
                 }
             }
-        })
+        }
 }
 
 
-   
+    )}
