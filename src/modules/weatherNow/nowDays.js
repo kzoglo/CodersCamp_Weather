@@ -10,7 +10,7 @@ export const changeToPresentDay = async function(city) {
 };
 
 const apiKey = 'd50a614e489fbba6669358f04ee95daa';
-const query = 'http://api.openweathermap.org/data/2.5/forecast?id=';
+const query = 'https://api.openweathermap.org/data/2.5/forecast?id=';
 const units = 'metric';
 
 function fetchFromApi(cityInput) {
@@ -103,7 +103,7 @@ function createTempChar(todayObjects) {
 
 function createWindChar(x) {
   $("#chartContainer").html("");
-  $.get('/src/modules/weatherNow/wind.mst', function(template) {
+  $.get('../src/modules/weatherNow/wind.mst', function(template) {
     const result = Mustache.to_html(template, x.list[0]);
     $('#chartContainer').html(result);
     $(".fa-location-arrow")[0].style.cssText = `--wind-deg: ${x.list[0].wind.deg}deg`;
@@ -112,7 +112,7 @@ function createWindChar(x) {
 
 function createRainChar(x) {
   $("#chartContainer").html("");
-  $.get('/src/modules/weatherNow/rain.mst', function(template) {
+  $.get('../src/modules/weatherNow/rain.mst', function(template) {
     let weather = checkWeather(x.list[0].weather[0])[0]
     const result = Mustache.to_html(template, weather);
     $('#chartContainer').html(result);
