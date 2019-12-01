@@ -48,7 +48,6 @@ function fetchFromApi(cityInput){
 
 function render(x) {
     $.get('/src/modules/weatherOneDay/oneDay.mst', function(template) {
-        console.log(x);
         document.getElementById('nameOfCity').textContent = x.city.name;
         const result = Mustache.to_html(template, x.list[0]);
         $('.main').html(result);

@@ -22,7 +22,6 @@ function fetchFromApi(cityInput) {
 
 function render(x) {
  $.get('/src/modules/weatherNow/nowDays.mst', function(template) {
-  console.log(x);
   document.getElementById('nameOfCity').textContent = x.city.name;
   const result = Mustache.to_html(template, x.list[0]);
   $('.main').html(result);
@@ -59,7 +58,6 @@ function getTodaysObject(x) {
    return date;
   }
  });
- //  console.log(todayObjects);
  return todayObjects;
 }
 
@@ -75,7 +73,6 @@ function getTodaysDate() {
 
 function createTempChar(todayObjects) {
  $("#chartContainer").html("");
- console.log(todayObjects)
   const h = todayObjects.map(x => [x.dt_txt.split(' ')[1].split(':')[0], x.main.temp])
   let tableObjectOfh = []
   for(let i=0; i<h.length; i++) {
@@ -107,12 +104,10 @@ function createTempChar(todayObjects) {
 function createWindChar(x) {
   $("#chartContainer").html("");
   $.get('/src/modules/weatherNow/wind.mst', function(template) {
-    console.log(x)
     const result = Mustache.to_html(template, x.list[0]);
     $('#chartContainer').html(result);
     $(".fa-location-arrow")[0].style.cssText = `--wind-deg: ${x.list[0].wind.deg}deg`;
    });
-  console.log('wind');
 }
 
 function createRainChar(x) {
@@ -122,9 +117,7 @@ function createRainChar(x) {
     const result = Mustache.to_html(template, weather);
     $('#chartContainer').html(result);
     $("#imgRain").attr('src', `http://openweathermap.org/img/w/${weather.icon}.png`);
-    // $(".fa-location-arrow")[0].style.cssText = `--wind-deg: ${x.list[0].wind.deg}deg`;
    });
-  // console.log('rain');
 }
 
 function checkWeather(weather) {
@@ -133,10 +126,8 @@ function checkWeather(weather) {
   if(weather.main.includes('Snow')) {
     todayWeather.push({x:'Śnieg', icon:weather.icon})
   } else if(weather.main.includes('Clear')) {
-    // todayWeather.push(['Czyste niebo', weather.icon])
     todayWeather.push({x:'Czyste niebo', icon:weather.icon})
   } else if(weather.main.includes('Cloud')) {
-    // todayWeather.push(['Chmury', weather.icon])
     todayWeather.push({x:'Zachmurzone niebo', icon:weather.icon})
   } 
   return todayWeather;
