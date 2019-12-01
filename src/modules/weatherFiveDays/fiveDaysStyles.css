@@ -1,0 +1,26 @@
+.container2{
+  text-align: center;
+  justify-items: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 2px;
+  grid-template-columns: auto;
+  padding: 3%;
+}
+h1{
+    font-size: 20px;
+    
+}
+@media only screen and (max-width: 650px) {
+  
+  h1{
+      font-size: 15px;
+      
+  }
+
+  .container2{
+    padding: 0%;
+  }
+
+}
