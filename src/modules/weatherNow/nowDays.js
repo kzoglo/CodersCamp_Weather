@@ -103,7 +103,7 @@ function createTempChar(todayObjects) {
 
 function createWindChar(x) {
   $("#chartContainer").html("");
-  $.get('/src/modules/weatherNow/wind.mst', function(template) {
+  $.get('../src/modules/weatherNow/wind.mst', function(template) {
     const result = Mustache.to_html(template, x.list[0]);
     $('#chartContainer').html(result);
     $(".fa-location-arrow")[0].style.cssText = `--wind-deg: ${x.list[0].wind.deg}deg`;
