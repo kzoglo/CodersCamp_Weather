@@ -1,16 +1,19 @@
-div{
-    /* background-color: rgb(255, 252, 220); */
+
+.main{
+    
     display: grid;
     grid-template-columns: max-content;
     grid-template-rows: max-content;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+.container{
+  justify-items: center;
+  align-content: center;
+  position: relative;
 }
 h1{
     font-size: 45px;
-    align-content:center;
-    text-align: center
+    /* font-family: Arial, Helvetica, sans-serif; */
     
-}
-canvas{
-  justify-content: center;
-  align-content: center;
 }
