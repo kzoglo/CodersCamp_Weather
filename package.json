@@ -19,7 +19,9 @@
     "@babel/polyfill": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "babel-loader": "^8.0.6",
+    "bootstrap": "^4.4.1",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.2.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -35,9 +37,12 @@
     "file-loader": "^4.3.0",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
+    "jquery": "^3.4.1",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^0.8.0",
-    "mustache": "^3.1.0",
+    "mustache": "^4.0.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "popper.js": "^1.16.0",
     "prettier": "^1.19.1",
     "style-loader": "^1.0.0",
     "terser-webpack-plugin": "^2.2.1",
@@ -48,13 +53,5 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.7.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/goraklaudia/CodersCamp_projekt3.git"
-  },
-  "bugs": {
-    "url": "https://github.com/goraklaudia/CodersCamp_projekt3/issues"
-  },
-  "homepage": "https://github.com/goraklaudia/CodersCamp_projekt3#readme"
+  }
 }
