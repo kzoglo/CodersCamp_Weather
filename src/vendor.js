@@ -1,3 +1,5 @@
 // PLACE FOR IMPORTS OF LIBRARIES
-// eg. import "bootstrap";
-// eg. import "jquery";
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+console.log('vendor');
