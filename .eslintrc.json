@@ -1,4 +1,8 @@
 {
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "extends": ["airbnb", "prettier"],
   "plugins": ["prettier"],
   "rules": {
@@ -6,7 +10,7 @@
     "prettier/prettier": "error",
     "no-unused-vars": "warn",
     "func-names": "off",
-    "no-console": "error",
+    "no-console": "off",
     "padded-blocks": "off"
   }
 }
