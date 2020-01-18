@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # CodersCamp_projekt3
 
 ## Wytyczne do projektu: apka pogodowa (JS na froncie)
@@ -82,3 +83,7 @@ Tutaj gość mówi o tym czym jest UX (nagrał całą playlistę):
 - Sposoby organizacji pracy w projekcie:
 - [Scrum](https://www.youtube.com/watch?v=XU0llRltyFM)
 - [Kanban](https://www.youtube.com/watch?v=R8dYLbJiTUE)
+=======
+# CodersCamp_Weather
+weather forecast app
+>>>>>>> ba3edb13d530a50cb9c9f22692cd2ce7790e8ad5
