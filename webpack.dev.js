@@ -1,7 +1,7 @@
-const common = require('./webpack.common');
 const merge = require('webpack-merge');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const common = require('./webpack.common');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -15,7 +15,8 @@ module.exports = merge(common, {
     })
   ],
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader']
       },
@@ -24,7 +25,7 @@ module.exports = merge(common, {
         exclude: /node_modules/,
         loader: 'eslint-loader',
         options: {
-          emitWarning: true,
+          emitWarning: false,
           configFile: './.eslintrc.json'
         }
       }

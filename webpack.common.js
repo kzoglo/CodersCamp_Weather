@@ -1,23 +1,61 @@
+const CopyPlugin = require('copy-webpack-plugin');
+
 module.exports = {
-    entry: {
-        main: './src/index.js',
-        vendor: './src/vendor.js'
-    },
-    module: {
-        rules: [{
-                test: /\.html$/,
-                use: ['html-loader']
-            },
-            {
-                test: /\.(svg|png|jpg|gif)$/,
-                use: {
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[hash].[ext]',
-                        outputPath: 'imgs'
-                    }
-                }
-            }
+  entry: {
+    main: './src/index.js',
+    vendor: './src/vendor.js'
+  },
+  plugins: [
+    new CopyPlugin([
+      {
+        from: 'src/assets/cityList/*.json',
+        to: 'assets',
+        transformPath() {
+          return 'assets/cityList/cityList.json';
+        }
+      },
+      {
+        from: 'src/modules/weatherFiveDays/*.mst',
+        to: 'modules/weatherFiveDays/',
+        flatten: true
+      },
+      {
+        from: 'src/modules/weatherNow/*.mst',
+        to: 'modules/weatherNow/',
+        flatten: true
+      },
+      {
+        from: 'src/modules/weatherOneDay/*.mst',
+        to: 'modules/weatherOneDay/',
+        flatten: true
+      },
+      {
+        from: 'src/assets/img/wind.gif',
+        to: 'assets/img',
+        flatten: true
+      }
+    ])
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader'
+          }
         ]
-    }
+      },
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: 'assets/img'
+          }
+        }
+      }
+    ]
+  }
 };
