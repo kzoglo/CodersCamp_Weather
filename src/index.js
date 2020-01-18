@@ -17,7 +17,7 @@ const doneTypingInterval = 500; // Time in ms (.5 second)
 
 /* **** UTILITY FUNCTIONS **** */
 async function getData() {
-  const all = await fetch('/assets/cityList/cityList.json');
+  const all = await fetch('/CodersCamp_Weather/assets/cityList/cityList.json');
   const json = await all.json();
   return json;
 }
