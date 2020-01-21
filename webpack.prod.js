@@ -21,7 +21,7 @@ module.exports = merge(common, {
         template: './src/template.html',
         minify: {
           removeAttributeQuotes: false,
-          collapseWhitespace: false,
+          collapseWhitespace: true,
           removeComments: false
         }
       })
