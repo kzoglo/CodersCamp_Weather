@@ -22,7 +22,7 @@ function fetchFromApi(cityInput) {
 }
 
 function render(x) {
-  $.get('/modules/weatherNow/nowDays.mst', function(template) {
+  $.get('modules/weatherNow/nowDays.mst', function(template) {
     document.getElementById('nameOfCity').textContent = x.city.name;
     const result = Mustache.render(template, x.list[0]);
     $('.main').html(result);
@@ -121,7 +121,7 @@ function createTempChar(todayObjects) {
 
 function createWindChar(x) {
   $('#chartContainer').html('');
-  $.get('/modules/weatherNow/wind.mst', function(template) {
+  $.get('modules/weatherNow/wind.mst', function(template) {
     const result = Mustache.render(template, x.list[0]);
     $('#chartContainer').html(result);
     $(
@@ -132,7 +132,7 @@ function createWindChar(x) {
 
 function createRainChar(x) {
   $('#chartContainer').html('');
-  $.get('/modules/weatherNow/rain.mst', function(template) {
+  $.get('modules/weatherNow/rain.mst', function(template) {
     let weather = checkWeather(x.list[0].weather[0])[0];
     const result = Mustache.render(template, weather);
     $('#chartContainer').html(result);

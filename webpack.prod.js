@@ -20,7 +20,7 @@ module.exports = merge(common, {
       new HtmlWebpackPlugin({
         template: './src/template.html',
         minify: {
-          removeAttributeQuotes: false,
+          removeAttributeQuotes: true,
           collapseWhitespace: true,
           removeComments: false
         }

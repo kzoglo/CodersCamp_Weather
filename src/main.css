@@ -67,10 +67,6 @@ body {
  box-shadow: 2px 2px 15px cornflowerblue;
 }
 
-/* .main {
-  height: 40vh;
-} */
-
 .cities-wrapper {
  position: relative;
 }
@@ -132,9 +128,6 @@ body {
  border-image: linear-gradient(to left, #30a3dce8, rgba(35, 34, 93, 0.99)) 150
   repeat;
  font-family: sans-serif;
- /* position: fixed;
- left: 0;
- bottom: 0; */
 }
 
 .footer-authors {
@@ -144,7 +137,6 @@ body {
  grid-template-columns: repeat(4, 20%);
  justify-content: center;
  align-content: center;
- /* font-size: 1rem; */
  text-shadow: 1px 1px 3px black;
 }
 
@@ -184,10 +176,6 @@ body {
  height: 25%;
  width: 25%;
 }
-
-/* .spaceBottom {
- height: 15vh;
-} */
 
 .btn-group {
  width: 100%;
@@ -231,10 +219,6 @@ body {
   border: none;
   font-size: 1rem;
  }
-
- /* .authors {
-  font-size: 20px;
- } */
 
  #imgOpen {
   height: 35%;
