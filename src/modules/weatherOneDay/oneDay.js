@@ -44,9 +44,7 @@ function fetchFromApi(cityInput) {
 }
 
 function render(x) {
-  $.get('/CodersCamp_Weather/modules/weatherOneDay/oneDay.mst', function(
-    template
-  ) {
+  $.get('modules/weatherOneDay/oneDay.mst', function(template) {
     document.getElementById('nameOfCity').textContent = x.city.name;
     const result = Mustache.render(template, x.list[0]);
     $('.main').html(result);

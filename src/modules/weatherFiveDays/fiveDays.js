@@ -20,7 +20,7 @@ function fetchFromApi(cityInput) {
 }
 
 function render(x) {
-  $.get('/CodersCamp_Weather/modules/weatherFiveDays/fiveDays.mst', function(
+  $.get('modules/weatherFiveDays/fiveDays.mst', function(
     template
   ) {
     const result = Mustache.render(template, x.list[0]);
