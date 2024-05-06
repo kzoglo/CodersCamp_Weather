@@ -1,7 +1,8 @@
-const merge = require('webpack-merge');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const common = require('./webpack.common');
+const path = require('path')
+const merge = require('webpack-merge')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+const common = require('./webpack.common')
 
 module.exports = merge(common, {
   mode: 'development',
@@ -23,12 +24,23 @@ module.exports = merge(common, {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'eslint-loader',
-        options: {
-          emitWarning: false,
-          configFile: './.eslintrc.json'
-        }
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-transform-runtime']
+            },
+          },
+          {
+            loader: 'eslint-loader',
+            options: {
+              emitWarning: false,
+              configFile: './.eslintrc.json',
+            },
+          },
+        ],
       }
     ]
   }
-});
+})

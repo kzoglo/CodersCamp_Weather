@@ -1,4 +1,4 @@
-<div class="container2">
+<div class="fiveDaysWeatherContainer">
   <h1>Pogoda na 5 dni</h1>
   <canvas id="myChart"></canvas>
 </div>

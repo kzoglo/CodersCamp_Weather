@@ -1,0 +1,29 @@
+
+<div id="container">
+  <div class="mainBox">
+    <div class="gridItem notEmpty" id="temp" data-toggle="tooltip" data-placement="top" title="Zobacz temperaturę na cały dzień"> Temperatura: <br><b>{{main.temp}} &#176;C</b> </div>
+    <div class="gridItem notEmpty " id="rain" data-toggle="tooltip" data-placement="top" title="Zobacz czy pada"> Opad/Niebo <b></b></div>
+    <div class="gridItem notEmpty"> Wilgotność: <br><b>{{main.humidity}} %</b> </div>
+    <div class="gridItem notEmpty" id="wind" data-toggle="tooltip" data-placement="top" title="Zobacz jak dzisiaj wieje"> Prędkość wiatru: <br><b>{{wind.speed}} km/h</b></div>
+
+    <div class="gridItem notEmpty"> Temperatura minimalna: <br><b>{{main.temp_min}} &#176;C</b></div>
+    <div class="gridItem" id="empty">  </div>
+    <div class="gridItem notEmpty"> Ciśnienie:<br> <b>{{main.pressure}} hec</b></div>
+    <div class="gridItem notEmpty"> Kierunek wiatru:<br> <b>{{wind.deg}}&#176;</b></div>
+
+    <div class="gridItem notEmpty"> Temperatura maksymalna:<br> <b>{{main.temp_max}} &#176;C</b></div>
+    <div class="gridItem" id="empty">  </div>
+    <div class="gridItem" id="empty">  </div>
+    <div class="gridItem" id="empty">  </div>
+
+    <div class="gridItem notEmpty"> Wschód słońca: <br><b><span id="sunriseValue"></span> </b></div>
+    <div class="gridItem notEmpty"> <i class="fa fa-sun-o"></i> </div>
+    <div class="gridItem notEmpty"> Zachód słońca:<br> <b><span id="sunsetValue"></span>  </b> </div>
+    <div class="gridItem notEmpty"> <i class="fa fa-moon-o"></i> </div>
+  </div>
+  <div id="secBox" class="secBox">
+    <div id="todayDate"></div> <br>
+    <div id="chartContainer"></div>
+    <div></div>
+  </div>
+</div>

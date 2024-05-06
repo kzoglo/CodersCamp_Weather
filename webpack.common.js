@@ -1,4 +1,4 @@
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -11,7 +11,7 @@ module.exports = {
         from: 'src/assets/cityList/*.json',
         to: 'assets',
         transformPath() {
-          return 'assets/cityList/cityList.json';
+          return 'assets/cityList/cityList.json'
         }
       },
       {
@@ -20,13 +20,13 @@ module.exports = {
         flatten: true
       },
       {
-        from: 'src/modules/weatherNow/*.mst',
-        to: 'modules/weatherNow/',
+        from: 'src/modules/weatherToday/*.mst',
+        to: 'modules/weatherToday/',
         flatten: true
       },
       {
-        from: 'src/modules/weatherOneDay/*.mst',
-        to: 'modules/weatherOneDay/',
+        from: 'src/modules/weatherTomorrow/*.mst',
+        to: 'modules/weatherTomorrow/',
         flatten: true
       },
       {
@@ -58,4 +58,4 @@ module.exports = {
       }
     ]
   }
-};
+}

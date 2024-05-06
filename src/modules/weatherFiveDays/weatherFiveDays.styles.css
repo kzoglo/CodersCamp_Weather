@@ -1,4 +1,4 @@
-.container2{
+.fiveDaysWeatherContainer {
   text-align: center;
   justify-items: center;
   align-content: center;
@@ -8,19 +8,17 @@
   grid-template-columns: auto;
   padding: 3%;
 }
-h1{
-    font-size: 20px;
-    
+
+h1 {
+  font-size: 20px;
 }
+
 @media only screen and (max-width: 650px) {
-  
-  h1{
-      font-size: 15px;
-      
+  h1 {
+    font-size: 15px;
   }
 
-  .container2{
+  .fiveDaysWeatherContainer {
     padding: 0%;
   }
-
 }

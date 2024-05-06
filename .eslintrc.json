@@ -3,14 +3,19 @@
     "browser": true,
     "node": true
   },
-  "extends": ["airbnb", "prettier"],
-  "plugins": ["prettier"],
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
     "linebreak-style": "off",
-    "prettier/prettier": "error",
     "no-unused-vars": "warn",
     "func-names": "off",
     "no-console": "off",
-    "padded-blocks": "off"
+    "padded-blocks": "off",
+    "no-plusplus": "off"
   }
 }
