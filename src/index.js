@@ -25,9 +25,7 @@ const handleReset = () => {
 }
 
 async function getCitiesData() {
-  // TODO - tutaj moze byc problem po wrzuceniu
-  const citiesResp = await fetch('./assets/cityList/cityList.json')
-  // const citiesResp = await fetch('CodersCamp_Weather/assets/cityList/cityList.json');
+  const citiesResp = await fetch('/CodersCamp_Weather/assets/cityList/cityList.json')
   const cities = await citiesResp.json()
 
   return cities
