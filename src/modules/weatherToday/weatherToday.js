@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Mustache from 'mustache'
-import * as CanvasJS from "@canvasjs/charts"
+import * as CanvasJS from '@canvasjs/charts'
 
 import fetchCityData from '../../fetchCityData'
 
@@ -17,11 +17,11 @@ function getTodayDate() {
   const date = new Date()
   let todayDate = ''
 
-  if (date.getDate() < 10) {
-    todayDate = `${date.getFullYear()}-0${date.getMonth() + 1}-0${date.getDate()}`
-  } else {
-    todayDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-  }
+  const year = `${date.getFullYear()}`
+  const month = date.getDay() < 10 ? `0${date.getMonth() + 1}` : `${date.getMonth() + 1}`
+  const day = date.getDate() < 10 ? `0${date.getDate()}` : `${date.getDate()}`
+
+  todayDate = `${year}-${month}-${day}`
 
   return todayDate
 }
