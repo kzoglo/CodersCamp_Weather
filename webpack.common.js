@@ -33,6 +33,11 @@ module.exports = {
         from: 'src/assets/img/wind.gif',
         to: 'assets/img',
         flatten: true
+      },
+      {
+        from: 'src/assets/img/weather.png',
+        to: 'assets/img',
+        flatten: true
       }
     ])
   ],
