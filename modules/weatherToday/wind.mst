@@ -1,6 +1,6 @@
 <div>
     {{#wind.speed}}
-    <img src="/CodersCamp_Weather/assets/img/wind.gif" alt="wind" id="imgWind">
+    <img src="../../assets/img/wind.gif" alt="wind" id="imgWind">
     {{/wind.speed}}
     <div id="spaceIconContentWind"></div>
     <div id="windContent">Prędkość: {{wind.speed}} km/h</div> <br><br>
